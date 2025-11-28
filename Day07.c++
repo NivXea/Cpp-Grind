@@ -25,6 +25,11 @@ mp.erase("AKSHAY");
 6. Looping Through A Map
 for (auto &p : mp) cout << p.first << "->" <<  p.second;
 _______________________________________________________________________________________________________________________________________________________________________________________
+//Ordered Map
+#include <map>
+map<string,int> mp;
+and the operations are same as unordered map
+_______________________________________________________________________________________________________________________________________________________________________________________
 // Sorting Vectors/Lists
 Syntax: #include <algorithm>
 sort(v.begin() , v.end() , comparator) 
