@@ -55,9 +55,49 @@ Output:
 33 Absent
 -----------------
 
-2. 
+2. Lower Bound(Works on SORTEDDD VECTORS)
+Syntax: auto it = lower_bound(v.begin() , v.end() , x);
+        int index = it - v.begin();
+This Fn return the value of index of the first element >= x;
 
+For Ex:
+int main(){
+    vector<int> v = {87,43,2,3,1,5,66,87};
+    sort(v.begin() , v.end());
 
+    auto it = lower_bound(v.begin() , v.end() , 6);
+    int index = it - v.begin();
+
+    v.insert(it , 6);
+    for (int i : v) cout << i << " ";
+    return 0;
+}
+Output:
+-----------------------
+1 2 3 5 6 43 66 87 87 
+-----------------------
+
+3. Upper Bound(Works on SORTED LISTS)
+-> The Same as Lower Bound but index of number > X (stritcly greater)
+
+Syntax: auto it = upper_bound(v.begin() , v.end() , x);
+        int index = it - v.begin();
+
+For Ex:
+int main(){
+    vector<int> v = {87,43,2,3,1,5,66,87};
+    sort(v.begin() , v.end());
+
+    auto it = upper_bound(v.begin() , v.end() , 6);
+    v.insert(it , 6);
+    for (int i : v) cout << i << " ";
+    return 0;
+}
+Output: 
+------------------------
+1 2 3 5 6 43 66 87 87
+------------------------
+        
 ___________________________________________________________________________________________________________________________________________________________________________________________
   
 
